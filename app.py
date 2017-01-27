@@ -6,7 +6,12 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def main():
+def routeMain():
     return 'hello'
+
+@app.route('/login')
+def routeLogin():
+    return 'login'
+
 
 app.run()
