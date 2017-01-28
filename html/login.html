@@ -21,18 +21,6 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
 
-    function login_google() {
-         dialog.dialog( "open" );
-    }
-    function login_naver() {
-	    alert('아직 안만들엇지롱~~');
-    }
-    function login_apple() {
-	    alert('아직 안만들엇지롱~~');
-    }
-    function login_etc() {
-	    alert('아직 안만들엇지롱~~');
-    }
   $( function() {
     var dialog, form,
       name = $( "#name" ),
@@ -42,7 +30,7 @@
       tips = $( ".validateTips" );
     
     function addUser() {
-        
+        alert(name.val())
     }
  
     dialog = $( "#dialog-form" ).dialog({
@@ -67,7 +55,20 @@
       addUser();
     });
  
-    $( "#create-user" ).button().on( "click", function() {
+    $( "#btn1" ).button().on( "click", function() {
+        tips.text("google")
+      dialog.dialog( "open" );
+    });
+    $( "#btn2" ).button().on( "click", function() {
+        tips.text("naver")
+      dialog.dialog( "open" );
+    });
+    $( "#btn3" ).button().on( "click", function() {
+        tips.text("apple")
+      dialog.dialog( "open" );
+    });
+    $( "#btn4" ).button().on( "click", function() {
+        tips.text("etc")
       dialog.dialog( "open" );
     });
   } );
@@ -76,10 +77,10 @@
 <body>
 
 
-    <input type='button' id='btn1' onclick='login_google();' value='구글로 로그인' />
-    <input type='button' id='btn2' onclick='login_naver();' value='네이버로 로그인' />
-    <input type='button' id='btn3' onclick='login_apple();' value='애플로 로그인' />
-    <input type='button' id='btn4' onclick='login_etc();' value='기타 caldav 로그인' />
+    <input type='button' id='btn1' value='구글로 로그인' />
+    <input type='button' id='btn2' value='네이버로 로그인' />
+    <input type='button' id='btn3' value='애플로 로그인' />
+    <input type='button' id='btn4' value='기타 caldav 로그인' />
  
 <div id="dialog-form" title="Create new user">
   <p class="validateTips">All form fields are required.</p>
@@ -100,7 +101,6 @@
 </div>
  
  
-<button id="create-user">Create new user</button>
  
  
 </body>
