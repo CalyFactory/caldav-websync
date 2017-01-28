@@ -17,6 +17,12 @@ def routeLogin():
 @app.route('/calendar', methods=['POST','GET'])
 def routeCalendar():
     print(request.form)
+    hostname = request.form['hostname']
+    userId = request.form['userId']
+    userPw = request.form['userPw']
+
+    
+
     return static.HTML_CALENDAR_PAGE
 
 
