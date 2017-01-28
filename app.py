@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import Response
 from flask import request
+import static
 
 app = Flask(__name__)
 
@@ -11,7 +12,7 @@ def routeMain():
 
 @app.route('/login')
 def routeLogin():
-    return 'login'
+    return static.HTML_LOGIN_PAGE
 
 
 app.run()
