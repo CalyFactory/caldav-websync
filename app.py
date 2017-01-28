@@ -14,5 +14,10 @@ def routeMain():
 def routeLogin():
     return static.HTML_LOGIN_PAGE
 
+@app.route('/calendar', methods=['POST','GET'])
+def routeCalendar():
+    print(request.form)
+    return static.HTML_CALENDAR_PAGE
+
 
 app.run()
