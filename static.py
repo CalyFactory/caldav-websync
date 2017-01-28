@@ -5,3 +5,5 @@ def readFile(fileName):
     return data 
 
 HTML_LOGIN_PAGE = readFile("login.html")
+
+HTML_CALENDAR_PAGE = readFile("calendar.html")
